@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Orozco">
+    <title>Core Guardian | David Orozco - Consultoría en Seguridad y TI</title>
+    <style>
+        :root { --primary: #0056b3; --text: #2d3436; --light-text: #636e72; --bg: #ffffff; --card-bg: #f8f9fa; --accent: #d63031; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+
+        .header { text-align: center; padding: 30px 0; border-bottom: 1px solid #eee; margin-bottom: 30px; }
+        .logo-emblem { font-size: 1.8rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--text); }
+        .logo-emblem .c { color: var(--primary); }
+        
+        .verified-badge { font-size: 0.85rem; color: var(--light-text); margin-top: 8px; display: block; letter-spacing: 0.5px; }
+        .verified-badge strong { color: var(--primary); font-weight: 600; }
+
+        .hero { text-align: center; margin: 40px 0; }
+        h1 { font-size: 1.8rem; color: var(--text); margin-bottom: 10px; font-weight: 700; }
+        .hero p { color: var(--light-text); font-size: 1.1rem; }
+
+        .pain-points { background: #fff5f5; border-radius: 12px; padding: 25px; margin: 30px 0; border: 1px solid #ffe3e3; }
+        .pain-points h2 { color: var(--accent); font-size: 1.2rem; margin-top: 0; text-transform: uppercase; }
+        .question-list { list-style: none; padding: 0; margin: 0; }
+        .question-list li { margin-bottom: 12px; font-size: 1rem; color: #444; display: flex; align-items: flex-start; }
+        .question-list li::before { content: "●"; color: var(--accent); font-size: 0.8rem; margin-right: 12px; margin-top: 6px; }
+
+        .grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .card { background: var(--card-bg); padding: 25px; border-radius: 8px; border: 1px solid #eaeff2; transition: 0.2s; }
+        .card:hover { border-color: var(--primary); background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary); margin-top: 0; font-size: 1.2rem; display: flex; align-items: center; }
+        .card h3 span { margin-right: 10px; font-size: 1.4rem; }
+        .card p { font-size: 0.95rem; color: var(--light-text); margin-bottom: 0; }
+
+        .cta { text-align: center; margin-top: 50px; padding: 40px; background: #f1f3f5; border-radius: 15px; }
+        .btn-blue { background: var(--primary); color: white; padding: 18px 35px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border-radius: 8px; display: inline-block; transition: 0.3s; }
+        .btn-blue:hover { background: #004494; transform: translateY(-2px); }
+
+        footer { text-align: center; padding: 50px 0; color: #a0a0a0; font-size: 0.8rem; border-top: 1px solid #eee; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="logo-emblem">
+            <span class="c">Core</span>Guardian
+        </div>
+        <span class="verified-badge">DIRECTOR TÉCNICO: <strong>DAVID OROZCO</strong></span>
+    </header>
+
+    <section class="hero">
+        <h1>Inteligencia Tecnológica y Blindaje Digital</h1>
+        <p>Soluciones integrales para la era digital en Manzanillo y el sector transporte.</p>
+    </section>
+
+    <div class="pain-points">
+        <h2>Preguntas Críticas para su Negocio:</h2>
+        <ul class="question-list">
+            <li>¿Su sitio web actual proyecta la solidez de una empresa de clase mundial o está alejando clientes?</li>
+            <li>¿Están protegidos sus dispositivos móviles contra el robo de información de rutas y clientes?</li>
+            <li>¿Qué pasaría con su operación si sus sistemas fueran vulnerados por falta de seguridad preventiva?</li>
+        </ul>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3><span>🌐</span> Arquitectura Web Corporativa</h3>
+            <p>Diseñamos portales profesionales de alto impacto para empresas de transporte y logística. Sitios rápidos, adaptables a móviles y con estándares de seguridad bancaria.</p>
+        </div>
+
+        <div class="card">
+            <h3><span>🛡️</span> Blindaje de Dispositivos Móviles</h3>
+            <p>Control de flotas (MDM). Bloqueo de aplicaciones recreativas, ahorro de datos y protección total de la información confidencial de su personal en campo.</p>
+        </div>
+
+        <div class="card">
+            <h3><span>🔍</span> Auditoría de Vulnerabilidades</h3>
+            <p>Identificamos las puertas abiertas en su red y equipos antes de que sean aprovechadas. Análisis de riesgo real basado en vulneraciones actuales en México.</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Lleve su empresa al siguiente nivel tecnológico</h2>
+        <p>Diseño web y seguridad con el respaldo técnico de David Orozco.</p>
+        <a href="https://wa.me/523141636516" class="btn-blue">SOLICITAR PRESUPUESTO PROFESIONAL</a>
+    </div>
+
+    <footer>
+        © 2026 CORE GUARDIAN | MANZANILLO, COLIMA <br>
+        AUTORÍA TÉCNICA VERIFICADA: DAVID OROZCO <br>
+        DESARROLLO WEB | CIBERSEGURIDAD | CONSULTORÍA TI
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+
+
