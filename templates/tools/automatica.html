@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="border: 2px solid #00ff00; padding: 20px; margin-top: 20px; background: #000;">
+    <h2 style="text-transform: uppercase; color: #00ff00;">Validador de Algoritmo Luhn</h2>
+    <p style="color: #888;">> Status: Online</p>
+    
+    <p>Verifica si un número (tarjeta, IMEI) es matemáticamente válido mediante el algoritmo de suma de comprobación.</p>
+
+    <div style="display: flex; margin-bottom: 20px;">
+        <span style="background: #00ff00; color: #000; padding: 10px; font-weight: bold;"> $ </span>
+        <input type="text" id="luhnInput" placeholder="Ingresa el número a auditar..." 
+               style="background: #000; color: #00ff00; border: 1px solid #00ff00; padding: 10px; width: 100%; outline: none; font-family: monospace;">
+    </div>
+
+    <button onclick="validarLuhn()" 
+            style="background: #00ff00; color: #000; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; font-family: monospace;">
+        [ EJECUTAR_AUDITORIA ]
+    </button>
+
+    <div id="resultado-box" style="margin-top: 20px; padding: 10px; border: 1px solid #333; min-height: 40px;">
+        <p id="resultado" style="margin: 0;">> Esperando entrada del sistema...</p>
+    </div>
+</div>
+
+<script>
+function validarLuhn() {
+    let input = document.getElementById('luhnInput').value;
+    let valor = input.replace(/\s+/g, ''); // Quita espacios
+    let suma = 0;
+    let debeDoblar = false;
+    let resElement = document.getElementById('resultado');
+    
+    if (valor.length < 2 || isNaN(valor)) {
+        resElement.innerHTML = "<span style='color: #ffcc00;'>> ERROR: Entrada no válida o muy corta.</span>";
+        return;
+    }
+
+    // Algoritmo de Luhn paso a paso
+    for (let i = valor.length - 1; i >= 0; i--) {
+        let digito = parseInt(valor.charAt(i));
+        if (debeDoblar) {
+            if ((digito *= 2) > 9) digito -= 9;
+        }
+        suma += digito;
+        debeDoblar = !debeDoblar;
+    }
+
+    if (suma % 10 == 0) {
+        resElement.innerHTML = "<span style='color: #00ff00;'>> RESULTADO: ESTRUCTURA VÁLIDA [OK]</span>";
+    } else {
+        resElement.innerHTML = "<span style='color: #ff0000;'>> RESULTADO: FALLO DE INTEGRIDAD [INVÁLIDO]</span>";
+    }
+}
+</script>
+{% endblock %}
