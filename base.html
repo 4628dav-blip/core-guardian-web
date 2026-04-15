@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Guardian | Security Suite</title>
+    <style>
+        body { background-color: #0d0d0d; color: #00ff00; font-family: 'Courier New', monospace; margin: 0; }
+        header { border-bottom: 1px solid #00ff00; padding: 15px; text-align: center; }
+        .ad-space { background: #111; border: 1px dashed #333; margin: 10px auto; text-align: center; padding: 10px; min-height: 90px; }
+        main { padding: 20px; max-width: 800px; margin: auto; }
+        footer { border-top: 1px solid #333; padding: 20px; text-align: center; font-size: 10px; color: #444; }
+        a { color: #00ff00; text-decoration: none; border: 1px solid #00ff00; padding: 5px; margin: 5px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="ad-space">
+        <p style="font-size: 10px;">[ PUBLICIDAD - BANNER SUPERIOR ]</p>
+    </div>
+
+    <header>
+        <h1>CORE_GUARDIAN_SYSTEM</h1>
+        <nav>
+            <a href="/tools/luhn">[LUHN]</a>
+            <a href="/tools/google-dorks">[DORKS]</a>
+            <a href="/tools/pass-audit">[PASS_AUDIT]</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>AUDIT_SYSTEM_v2.0 | ESCANEANDO_RED... OK</p>
+    </footer>
+
+</body>
+</html>
+
